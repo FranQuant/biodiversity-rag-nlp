@@ -75,7 +75,7 @@ biodiversity-rag-nlp/
 
 - [x] Document Ingestion & Preprocessing
 - [x] Embedding & Indexing in ChromaDB
-- [x] GPT-3.5 Q&A with citations
+- [x] GPT-4 Q&A with citations
 - [ ] Multi-model comparison (coming next!)
 
 ---
