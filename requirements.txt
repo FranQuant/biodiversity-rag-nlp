@@ -1,0 +1,9 @@
+llama-index
+chromadb
+PyMuPDF
+python-dotenv
+tqdm
+sentence-transformers
+transformers
+accelerate
+jupyterlab
