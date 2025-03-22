@@ -1,86 +1,76 @@
-#  Biodiversity RAG Assistant
+# Biodiversity RAG Assistant
 
-This project is a **Retrieval-Augmented Generation (RAG)** pipeline tailored for ESG and biodiversity-focused investment research. It uses **ChromaDB** as a vector store and **OpenAI GPT models** to perform semantic document search and answer investor-focused questions using natural language.
+A Retrieval-Augmented Generation (RAG) pipeline tailored for ESG and biodiversity-focused investment research. Built with ChromaDB and OpenAI GPT models, this system enables semantic search and question answering with transparent source citations from biodiversity documents.
 
----
+## Key Capabilities
 
-##  Description
+- Ingest and process ESG/Biodiversity reports (PDFs)
+- Embed document chunks with `sentence-transformers`
+- Index into a persistent ChromaDB vector store
+- Query with GPT-4 or GPT-3.5, returning answers grounded in document context
+- Answers include similarity-based citations for traceability
 
-The assistant is capable of:
-- Ingesting ESG/Biodiversity PDFs
-- Chunking and embedding them using `sentence-transformers`
-- Indexing chunks in ChromaDB
-- Answering queries using `gpt-4-turbo` or other LLMs with source-based answers
-
----
-
-##  Tech Stack
+## Tech Stack
 
 - Python 3.10+
 - Jupyter Notebooks
 - SentenceTransformers
 - ChromaDB
 - OpenAI API
-- dotenv (.env) config
+- dotenv for environment config
 
----
+## Getting Started
 
-##  How to Run
+1. Clone the repo and set up the environment:
 
-1. Clone the repo and create the environment:
-```bash
-git clone https://github.com/yourname/biodiversity-rag-nlp.git
-cd biodiversity-rag-nlp
-conda env create -f environment.yml
-conda activate bio-rag
-```
+   ```bash
+   git clone https://github.com/FranQuant/biodiversity-rag-nlp.git
+   cd biodiversity-rag-nlp
+   conda env create -f environment.yml
+   conda activate bio-rag
+   ```
 
-2. Add your OpenAI key to a `.env` file:
-```
-OPENAI_API_KEY=your-key-here
-```
+2. Add your OpenAI key to `.env`:
 
-3. Run notebooks in order:
-- `01_load_documents.ipynb`: Load and chunk PDFs
-- `02_build_vector_index.ipynb`: Generate embeddings, store in Chroma
-- `03_answer_with_gpt.ipynb`: Query GPT-4/GPT-3.5 with citations
+   ```
+   OPENAI_API_KEY=your-api-key-here
+   ```
 
----
+3. Run the notebooks in order:
 
-##  Project Structure
+   - `01_load_documents.ipynb` → Chunk and flatten the PDFs
+   - `02_build_vector_index.ipynb` → Generate embeddings and store them
+   - `03_answer_with_gpt.ipynb` → Ask questions with GPT and get cited answers
+
+## Folder Structure
 
 ```
 biodiversity-rag-nlp/
-│
 ├── notebooks/
 │   ├── 01_load_documents.ipynb
 │   ├── 02_build_vector_index.ipynb
 │   └── 03_answer_with_gpt.ipynb
-│
+├── data/
+│   └── vector_db/            (excluded via .gitignore)
 ├── outputs/
 │   └── flattened_docs.pkl
-│
-├── data/
-│   └── vector_db/            # Chroma vector store (ignored by git)
-│
-├── .env                      # Your OpenAI Key (not tracked)
+├── .env                      (excluded)
 ├── .gitignore
 ├── environment.yml
 ├── README.md
 ```
 
+## Project Status
+
+- Document ingestion & chunking: Complete
+- Embedding & persistent vector indexing: Complete
+- GPT-4 question answering with citations: Complete
+- Multi-model comparison: Coming soon
+
+## Author
+
+Francisco Salazar  
+Email: franquant@gmail.com  
+GitHub: https://github.com/FranQuant
+
 ---
-
-##  Status
-
-- [x] Document Ingestion & Preprocessing
-- [x] Embedding & Indexing in ChromaDB
-- [x] GPT-4 Q&A with citations
-- [ ] Multi-model comparison (coming next!)
-
----
-
-##  Author
-
-Francisco Salazar — [franquant@gmail.com](mailto:franquant@gmail.com)
-
