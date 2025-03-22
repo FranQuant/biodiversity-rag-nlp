@@ -10,7 +10,7 @@ The assistant is capable of:
 - Ingesting ESG/Biodiversity PDFs
 - Chunking and embedding them using `sentence-transformers`
 - Indexing chunks in ChromaDB
-- Answering queries using `gpt-3.5-turbo` or other LLMs with source-based answers
+- Answering queries using `gpt-4-turbo` or other LLMs with source-based answers
 
 ---
 
