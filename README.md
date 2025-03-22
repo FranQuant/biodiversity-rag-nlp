@@ -1,10 +1,10 @@
-# 🧠 Biodiversity RAG Assistant
+#  Biodiversity RAG Assistant
 
 This project is a **Retrieval-Augmented Generation (RAG)** pipeline tailored for ESG and biodiversity-focused investment research. It uses **ChromaDB** as a vector store and **OpenAI GPT models** to perform semantic document search and answer investor-focused questions using natural language.
 
 ---
 
-## 📚 Description
+##  Description
 
 The assistant is capable of:
 - Ingesting ESG/Biodiversity PDFs
@@ -14,7 +14,7 @@ The assistant is capable of:
 
 ---
 
-## 🧰 Tech Stack
+##  Tech Stack
 
 - Python 3.10+
 - Jupyter Notebooks
@@ -25,7 +25,7 @@ The assistant is capable of:
 
 ---
 
-## 🚀 How to Run
+##  How to Run
 
 1. Clone the repo and create the environment:
 ```bash
@@ -47,7 +47,7 @@ OPENAI_API_KEY=your-key-here
 
 ---
 
-## 📦 Project Structure
+##  Project Structure
 
 ```
 biodiversity-rag-nlp/
@@ -71,7 +71,7 @@ biodiversity-rag-nlp/
 
 ---
 
-## ✅ Status
+##  Status
 
 - [x] Document Ingestion & Preprocessing
 - [x] Embedding & Indexing in ChromaDB
@@ -80,8 +80,7 @@ biodiversity-rag-nlp/
 
 ---
 
-## 📌 Author
+##  Author
 
 Francisco Salazar — [franquant@gmail.com](mailto:franquant@gmail.com)
 
-> Built with GPT-4 guidance.
