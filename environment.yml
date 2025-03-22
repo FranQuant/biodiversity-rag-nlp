@@ -1,0 +1,17 @@
+name: bio-rag
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - jupyter
+  - numpy
+  - pandas
+  - scikit-learn
+  - sentence-transformers
+  - chromadb
+  - python-dotenv
+  - matplotlib
+  - pip:
+      - openai==0.28.1
